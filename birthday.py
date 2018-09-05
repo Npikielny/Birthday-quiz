@@ -43,7 +43,7 @@ todayYear= datetime.today().year
 #inputs
 name = str(input("Hello, what's your name?"))
 month = input("Hi " + name + ", what was the name of the month you were born in?")
-year = input("And what year were you born in, " + name + " ?")
+year = input("And what year were you born in, " + name + "?")
 day = input("And the day?")
 
 #Analyzing data
