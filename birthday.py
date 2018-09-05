@@ -34,6 +34,7 @@ Example Session
 #setup
 from datetime import datetime
 from calendar import month_name
+from math import ceil
 todayMonth = datetime.today().month
 monthIndex = {1 : "january", 2 : "february", 3 : "march", 4 : "april", 5 : "may", 6 : "june",7 : "july", 8 : "august", 9 : "september", 10 : "october", 11 : "november", 12 : "december"}
 todayDay = datetime.today().day
@@ -69,10 +70,10 @@ else:
 
 #Output
 if month.lower() == monthIndex[todayMonth] and int(day) == todayDay:
-    print("Happy Birthday")
+    print("Happy Birthday!")
     responses += 1
 if month.lower() == "october" and int(day) == 31:
     print("You were born on Halloween!")
     responses += 1
 if responses == 0:
-    print(Name + ", you are a", season, "baby of the" , decades[decade] + ".")
+    print(name + ", you are a", season, "baby of the" , str(decades[decade]) + ".")
