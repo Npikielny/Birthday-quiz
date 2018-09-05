@@ -70,5 +70,14 @@ if responses == 0:
     print(name + ", you are a")
 
 
-
+from datetime import datetime
+from math import ceil
+todayYear= datetime.today().year
+year = input("What year were you born in?")
+decades = {1 : "stone age", 2 : "eighties", 3 : "nineties", 4 : "two thousands"}
+if int(year) <= 1980:
+    decade = decades[1]
+else:
+    decade = math.ceil(int(year) - 1980) / 10)
+print(decade)
 
