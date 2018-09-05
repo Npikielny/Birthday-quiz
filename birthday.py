@@ -75,4 +75,4 @@ if month.lower() == "october" and int(day) == 31:
     print("You were born on Halloween!")
     responses += 1
 if responses == 0:
-    print(name + ", you are a")
+    print(Name + ", you are a", season, "baby of the" , decades[decade] + ".")
