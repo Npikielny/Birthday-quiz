@@ -31,21 +31,27 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+#setup
 from datetime import datetime
 from calendar import month_name
 todayMonth = datetime.today().month
 monthIndex = {1 : "january", 2 : "february", 3 : "march", 4 : "april", 5 : "may", 6 : "june",7 : "july", 8 : "august", 9 : "september", 10 : "october", 11 : "november", 12 : "december"}
 todayDay = datetime.today().day
 todayYear= datetime.today().year
-print(todayDay, todayMonth, todayYear)
+
+#inputs
 name = str(input("What's your name?"))
 month = input("What month were you born in?")
 day = input("What day of " + str(month) + " were you born in? (4 for the 4th of April)")
 year = input("What year were you born in?")
+
+#Analyzing data
 responses = 0
 decades = {1 : "stone age", 2 : "eighties", 3 : "nineties", 4 : "two thousands"}
 season = ""
 decade = ""
+
+#-----#Determining season of birth
 if month.lower() == "december" or month.lower() == "january" or month.lower() == "february":
     season = "Winter"
 elif month.lower() == "march" or month.lower() == "april" or month.lower() == "may":
@@ -55,11 +61,13 @@ elif month.lower() == "june" or month.lower() == "july" or month.lower() == "aug
 elif month.lower() == "september" or month.lower() == "november" or month.lower() == "october":
     season = "Fall"
 
+#-----#Determining Decade in which the user was born
 if int(year) <= 1980:
-    decade = decade[1]
+    decade = decades[1]
 else:
-    decade = round((year - 1980) / 10, 1)
+    decade = ceil((int(year) + 1 - 1980) / 10) + 1
 
+#Output
 if month.lower() == monthIndex[todayMonth] and int(day) == todayDay:
     print("Happy Birthday")
     responses += 1
@@ -68,16 +76,3 @@ if month.lower() == "october" and int(day) == 31:
     responses += 1
 if responses == 0:
     print(name + ", you are a")
-
-
-from datetime import datetime
-from math import ceil
-todayYear= datetime.today().year
-year = input("What year were you born in?")
-decades = {1 : "stone age", 2 : "eighties", 3 : "nineties", 4 : "two thousands"}
-if int(year) <= 1980:
-    decade = decades[1]
-else:
-    decade = math.ceil(int(year) - 1980) / 10)
-print(decade)
-
