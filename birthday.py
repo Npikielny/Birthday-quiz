@@ -41,10 +41,10 @@ todayDay = datetime.today().day
 todayYear= datetime.today().year
 
 #inputs
-name = str(input("What's your name?"))
-month = input("What month were you born in?")
-day = input("What day of " + str(month) + " were you born in? (4 for the 4th of April)")
-year = input("What year were you born in?")
+name = str(input("Hello, what's your name?"))
+month = input("Hi " + name + ", what was the name of the month were you born in?")
+year = input("And what year were you born in, " + name + " ?")
+day = input("And what day?")
 
 #Analyzing data
 responses = 0
@@ -76,4 +76,4 @@ if month.lower() == "october" and int(day) == 31:
     print("You were born on Halloween!")
     responses += 1
 if responses == 0:
-    print(name + ", you are a", season, "baby of the" , str(decades[decade]) + ".")
+    print(str(name) + ", you are a " + season + " baby of the " + str(decades[decade]) + ".")
