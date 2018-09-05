@@ -54,13 +54,13 @@ decade = ""
 
 #-----#Determining season of birth
 if month.lower() == "december" or month.lower() == "january" or month.lower() == "february":
-    season = "Winter"
+    season = "winter"
 elif month.lower() == "march" or month.lower() == "april" or month.lower() == "may":
-    season = "Spring"
+    season = "spring"
 elif month.lower() == "june" or month.lower() == "july" or month.lower() == "august":
-    season = "Summer"
+    season = "summer"
 elif month.lower() == "september" or month.lower() == "november" or month.lower() == "october":
-    season = "Fall"
+    season = "fall"
 
 #-----#Determining Decade in which the user was born
 if int(year) < 1980:
