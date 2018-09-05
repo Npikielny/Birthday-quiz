@@ -63,7 +63,7 @@ elif month.lower() == "september" or month.lower() == "november" or month.lower(
     season = "Fall"
 
 #-----#Determining Decade in which the user was born
-if int(year) <= 1980:
+if int(year) < 1980:
     decade = decades[1]
 else:
     decade = ceil((int(year) + 1 - 1980) / 10) + 1
