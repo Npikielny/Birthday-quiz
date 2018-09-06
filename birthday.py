@@ -48,7 +48,7 @@ day = input("And the day? ")
 
 #Analyzing data
 responses = 0
-decades = {1 : "stone age", 2 : "eighties", 3 : "nineties", 4 : "two thousands"}
+decades = {1 : "Stone age", 2 : "eighties", 3 : "nineties", 4 : "two thousands"}
 season = ""
 decade = ""
 
