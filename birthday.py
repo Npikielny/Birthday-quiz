@@ -31,7 +31,6 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
-#setup
 from datetime import datetime
 from calendar import month_name
 from math import ceil
@@ -40,19 +39,16 @@ monthIndex = {1 : "january", 2 : "february", 3 : "march", 4 : "april", 5 : "may"
 todayDay = datetime.today().day
 todayYear= datetime.today().year
 
-#inputs
 name = str(input("Hello, what is your name? "))
 month = input("Hi " + name + ", what was the name of the month you were born in? ")
 year = input("And what year were you born in, " + name + "? ")
 day = input("And the day? ")
 
-#Analyzing data
 responses = 0
 decades = {1 : "stone age", 2 : "eighties", 3 : "nineties", 4 : "two thousands"}
 season = ""
 decade = ""
 
-#-----#Determining season of birth
 if month.lower() == "december" or month.lower() == "january" or month.lower() == "february":
     season = "winter"
 elif month.lower() == "march" or month.lower() == "april" or month.lower() == "may":
@@ -62,13 +58,11 @@ elif month.lower() == "june" or month.lower() == "july" or month.lower() == "aug
 elif month.lower() == "september" or month.lower() == "november" or month.lower() == "october":
     season = "fall"
 
-#-----#Determining Decade in which the user was born
 if int(year) < 1980:
     decade = decades[1]
 else:
     decade = ceil((int(year) + 1 - 1980) / 10) + 1
 
-#Output
 if month.lower() == monthIndex[todayMonth] and int(day) == todayDay:
     print("Happy Birthday!")
     responses += 1
